@@ -1,7 +1,7 @@
 #  PINKLUNA AI Marketing Studio
 
 # 프로젝트 보고서 파일_pdf
-- [보고서](https://drive.google.com/file/d/15vdyj9BF3hxYfbcgW56uH6g4RuzgsFLY/view?usp=drive_link)
+- [보고서](https://drive.google.com/file/d/1k3oiFyEY6CeQlgJqXAeSqtmmsNK7jaYT/view?usp=drive_link)
 
 ---
 
