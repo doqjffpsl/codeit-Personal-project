@@ -6,14 +6,15 @@ from io import BytesIO
 import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=".env")  # 👈 명시적으로 경로 지정
+load_dotenv(dotenv_path=".env")  # 명시적으로 경로 지정
 
-# 🔐 API KEY (환경변수에서 가져오기)
+# API KEY (환경변수에서 가져오기)
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-st.set_page_config(page_title="AI 광고 문구 생성기", layout="centered")
+st.set_page_config(page_title="PINKLUNA AI Marketing Studio", layout="centered")
 
-st.title("📢 AI 광고 콘텐츠 생성기")
+st.title("PINKLUNA AI Marketing Studio")
+st.caption("핑크루나 상품 이미지를 업로드하면 AI가 광고 문구를 자동으로 생성합니다.")
 
 # 이미지 업로드
 uploaded_file = st.file_uploader("상품 이미지를 업로드하세요", type=["png", "jpg", "jpeg"])
@@ -43,7 +44,7 @@ if st.button("🚀 광고 문구 생성"):
 
     with st.spinner("AI 분석 중..."):
 
-        # 1️⃣ 이미지 설명 생성
+        # 1 이미지 설명 생성
         description_response = client.responses.create(
             model="gpt-5-mini",
             input=[{
@@ -63,7 +64,7 @@ if st.button("🚀 광고 문구 생성"):
 
         description = description_response.output_text
 
-        # 2️⃣ 광고 문구 생성
+        # 2 광고 문구 생성
         ad_response = client.responses.create(
             model="gpt-5-mini",
             input=f"""
@@ -78,7 +79,7 @@ if st.button("🚀 광고 문구 생성"):
 
         ad_text = ad_response.output_text
 
-    st.subheader("📌 상품 분석")
+    st.subheader("📌상품 분석")
     st.write(description)
 
     st.subheader("✨ 광고 문구")
