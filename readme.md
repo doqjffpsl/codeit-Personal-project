@@ -100,7 +100,7 @@ streamlit run app.py
 ↓   
 pinkluna.shop (가비아 도메인)   
 ↓ (DNS 설정)    
-www.pinkluna.shop   
+[www.pinkluna.shop](https://www.pinkluna.shop)   
 ↓   
 Streamlit Cloud (앱 호스팅)   
 ↓   
